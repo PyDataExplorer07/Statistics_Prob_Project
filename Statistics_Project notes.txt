@@ -1,0 +1,211 @@
+1. Data Handling
+
+Que.1 How would you handle missing values in a dataset? Describe at least two
+methods.
+
+Ans. A). Fill the missing values :-
+* Replace missing values with something meaningful =>
+1. For numbers: Use the average(mean) or middle value(median) of the column.
+2.For words or categories Use the most common value(mode).
+
+* This helps keep all the data while making it complete.
+
+Example :
+	If a column has missing ages, replace them with the average age.
+
+B). Remove Rows or Columns:-
+* If there are too many missing values:
+1. Remove the rows: if only few rows have missing values, it's easier to delete them.
+2. Remove the columns: If a column has mostly missing data, you can drop it.
+
+Example:
+	If a column is 80% empty, it's better to remove it.
+
+
+
+
+Que.2 Explain why it might be necessary to convert data types before performing an
+analysis.
+
+Ans. When we replace missing values with something meaningful:
+
+* For numbers: We add a sensible value like the average (mean) or the middle number (median) of the column. This keeps the data balanced.
+
+* For text or categories: We fill in the blank spaces with the most common value (mode) from that column, so it fits with the rest of the data.
+
+This way, we make the dataset complete without leaving empty spaces.
+
+
+
+2.Statistical Analysis
+
+Que.1 What is a T-test, and in what scenarios would you use it? Provide an example
+based on sales data.
+
+Ans. A T-test is a statistical method used to determine if there is a significant difference between the means (averages) of two groups. It helps us test hypotheses about whether two datasets are statistically different or if the differences are just due to random chance.
+
+Scenarios for Using a T-Test
+You use a T-test when:
+
+a. You want to compare the average performance of two groups (e.g., sales in two regions or months).
+b. You have continuous numerical data (e.g., revenue or profit).
+c. You want to test if a difference observed in sample data is significant or not.
+
+Example Using Sales Data
+Scenario:
+Suppose a company operates in Region A and Region B and wants to know if the average sales in these regions are significantly different.
+
+Steps:
+a. Collect sales data from both regions.
+b. Formulate the hypothesis:
+	1. Null Hypothesis (H0): The average sales in Region A and Region B are the same.
+	2. Alternative Hypothesis (H1): The average sales in Region A and Region B are different.
+
+c. Perform a T-test to compare the means.
+
+
+*Interpretation of Results*
+# T-Statistic: Measures the difference between the groups' means relative to variability in the data.
+# P-Value:
+	a. < 0.05: There is a significant difference between the groups.
+	b. ≥ 0.05: No significant difference; the observed variation could be due to chance.
+
+
+Que.2 Describe the Chi-square test for independence and explain when it should be
+used. How would you apply it to test the relationship between shipping mode and
+customer segment?
+
+Ans.The Chi-Square Test for Independence is a statistical test used to determine if two categorical variables are related (dependent) or not (independent). It compares the observed data in a contingency table to the expected data under the assumption that the two variables are independent.
+
+When to Use the Chi-Square Test
+Use the Chi-Square Test when:
+
+1.You have categorical variables (e.g., Shipping Mode, Customer Segment).
+2.You want to check if there is a relationship or association between the two variables.
+3.Your data is organized in a contingency table (e.g., counts of categories).
+
+Example: Shipping Mode vs. Customer Segment
+Scenario:
+Suppose a company wants to know if the shipping mode (e.g., Standard, Express) is related to the customer segment (e.g., Consumer, Corporate, Home Office).
+
+Steps to Apply:
+1.Create a Contingency Table:
+	a.Count how many times each shipping mode is used for each customer segment.
+
+2.Formulate Hypotheses:
+
+	a.Null Hypothesis (H0): Shipping mode and customer segment are independent (no relationship).
+	b.Alternative Hypothesis (H1): Shipping mode and customer segment are related (there is a relationship).
+
+3.Perform the Chi-Square Test.
+
+4.Interpret Results:
+
+	a. If the p-value < 0.05, reject the null hypothesis (there is a relationship).
+	b. If the p-value ≥ 0.05, fail to reject the null hypothesis (no relationship).
+
+
+This test helps businesses determine if factors like customer segment influence the choice of shipping mode. Insights like these can inform targeted marketing or logistics strategies.
+
+
+
+3. Univariate and Bivariate Analysis:
+Que.1 What is univariate analysis, and what are its key purposes?
+Ans. Univariate analysis involves analyzing a single variable to understand its distribution, patterns, and basic statistics. The term "univariate" comes from "uni" (one) and "variate" (variable), meaning it focuses on one variable at a time.
+
+Key Purposes of Univariate Analysis
+A).Understanding the Distribution:
+
+1. Identify how the data is spread.
+2. Check for skewness, symmetry, or unusual patterns.
+3. Tools: Histograms, density plots, box plots.
+
+Example:
+	Analyzing the distribution of sales revenue in a dataset.
+
+B). Calculating Summary Statistics:
+
+1.Get a quick overview of the variable.
+2.Key statistics:
+	a. Central Tendency: Mean, median, mode.
+	b. Dispersion: Standard deviation, variance, range, interquartile range.
+
+Example:
+	Calculating the average sales amount and standard deviation to understand variability.
+
+C. Identifying Outliers:
+
+1. Spot data points that deviate significantly from the rest.
+2. Tools: Box plots or z-scores.
+Example:
+	Highlighting unusually high or low sales figures that may require investigation.
+
+D. Detecting Data Issues:
+
+1. Check for missing values, duplicates, or incorrect entries.
+Example:
+	Ensuring there are no negative values in a column that should only contain positive numbers, like age or sales.
+
+E. Visualizing Data:
+
+1. Create simple visuals to summarize the data distribution.
+2. Common visualizations: Bar charts, histograms, pie charts.
+Example:
+	Plotting a histogram of product sales to understand the frequency distribution.
+
+
+Que.2 Explain the difference between univariate and bivariate analysis. Provide an
+example of each.
+
+Ans. Key Insights
+* Univariate Analysis helps you understand one variable in isolation, such as identifying whether sales follow a normal distribution.
+* Bivariate Analysis explores relationships between two variables, such as whether increased advertising leads to increased sales.
+
+These methods are foundational in exploratory data analysis (EDA) and help uncover trends and patterns in data.
+
+
+4.Data Visualization:
+Que.1 What are the benefits of using a correlation matrix in data analysis? How would
+you interpret the results?
+
+Ans.A correlation matrix is a table that shows the correlation coefficients between many variables. It helps in understanding the relationships between variables and provides insights into how one variable is related to another. 
+
+Here are the key benefits:
+1. Understanding Relationships Between Variables
+2. Data Simplification
+3. Feature Selection
+4. Detecting Multicollinearity
+5. Hypothesis Generation
+
+Que.2)How would you plot sales trends over time using a dataset? Describe the steps
+and tools you would use.
+
+Ans.
+
+1. Load and Prepare the Data : Ensure that the date column is in the correct format.
+
+Tools: pandas (for data manipulation).
+
+2. Clean the Data : Handle missing values or remove irrelevant data.
+
+Tools: pandas (for data cleaning)
+
+3. Aggregate Sales by Time Period : Group data by a relevant time period (e.g., month, week).
+
+Tools: pandas (for grouping and aggregation)
+
+4. Plot the Sales Trend : Use a line chart to visualize the trend over time.
+
+Tools: matplotlib or seaborn (for plotting)
+
+5. Customize and Enhance the Plot :  Add elements like rolling averages, labels, and legends for better
+
+6. Interpret the Plot : Analyze the sales trends for actionable insights.
+
+
+
+5. Sales and Profit Analysis:
+Que.1) How can you identify top-performing product categories based on total sales and
+profit? Describe the process.
+
+Ans. 
